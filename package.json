@@ -1,13 +1,13 @@
 {
-  "name": "@nostradamus/core",
-  "description": "Core contracts for the Nostradamus protocol",
+  "name": "@nostraswap/core",
+  "description": "Core contracts for the NostraSwap protocol",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scb-10x/nostradamus-core"
+    "url": "https://github.com/scb-10x/nostraswap-core"
   },
   "keywords": [
-    "nostradamus",
+    "nostraswap",
     "ethereum",
     "core",
     "contract"
