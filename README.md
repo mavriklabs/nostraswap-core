@@ -1,4 +1,4 @@
-# 🔮 NostraSwap
+# 🔮 Nostradamus
 # Local Development
 
 The following assumes the use of `node@10`.

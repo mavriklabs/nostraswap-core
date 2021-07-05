@@ -1,13 +1,13 @@
 {
-  "name": "@nostraswap/core",
-  "description": "Core contracts for the NostraSwap protocol",
+  "name": "@nostradamus/core",
+  "description": "Core contracts for the Nostradamus protocol",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scb-10x/nostraswap-core"
+    "url": "https://github.com/scb-10x/nostradamus-core"
   },
   "keywords": [
-    "nostraswap",
+    "nostradamus",
     "ethereum",
     "core",
     "contract"
@@ -20,8 +20,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@uniswap/lib": "4.0.1-alpha",
-    "@uniswap/v2-core": "1.0.0"
+    "bignumber.js": "^9.0.1"
   },
   "devDependencies": {
     "@types/chai": "^4.2.6",
@@ -41,10 +40,8 @@
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",
-    "copy-v1-artifacts": "ncp ./buildV1 ./build",
     "precompile": "yarn clean",
     "compile": "waffle .waffle.json",
-    "postcompile": "yarn copy-v1-artifacts",
     "pretest": "yarn compile",
     "test": "mocha",
     "prepublishOnly": "yarn test"

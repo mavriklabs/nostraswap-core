@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-interface IUniswapV2Pair {
+interface INostraSwapPair {
     event Approval(address indexed owner, address indexed spender, uint value);
     event Transfer(address indexed from, address indexed to, uint value);
 
@@ -38,9 +38,12 @@ interface IUniswapV2Pair {
     function token0() external view returns (address);
     function token1() external view returns (address);
     function getReserves() external view returns (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast);
-    function price0CumulativeLast() external view returns (uint);
-    function price1CumulativeLast() external view returns (uint);
+    function getOraclePrice1() external view returns (uint224 oraclePrice, uint32 latestBlockTimestamp);
+    function getOraclePrice0() external view returns (uint224 oraclePrice, uint32 latestBlockTimestamp);
     function kLast() external view returns (uint);
+
+    function limitRate() external view returns(uint224);
+    function lpips() external view returns(uint224[2][7] memory);
 
     function mint(address to) external returns (uint liquidity);
     function burn(address to) external returns (uint amount0, uint amount1);
@@ -49,4 +52,5 @@ interface IUniswapV2Pair {
     function sync() external;
 
     function initialize(address, address) external;
+    function setLimitPriceImpact(uint224) external;
 }
